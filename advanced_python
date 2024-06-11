@@ -1,0 +1,27 @@
+#task 1
+
+def merge_catalogs(*catalogs):
+    # Initialize an empty list to store the merged catalog
+    merged_catalog = []
+    
+    # Iterate over each catalog
+    for catalog in catalogs:
+        # Extend the merged catalog with the products from the current catalog
+        merged_catalog.extend(catalog)
+    
+    # Convert the merged list back to a tuple
+    merged_catalog = tuple(merged_catalog)
+    
+    return merged_catalog
+
+# Example catalogs
+catalog1 = (("Laptop", 1000), ("Camera", 500))
+catalog2 = (("Smartphone", 800), ("Tablet", 450))
+
+# Merge the catalogs
+combined_catalog = merge_catalogs(catalog1, catalog2)
+
+# Display the combined catalog
+print("Combined Catalog:")
+for product in combined_catalog:
+    print(product)

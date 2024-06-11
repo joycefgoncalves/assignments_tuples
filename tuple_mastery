@@ -1,0 +1,21 @@
+#task 1
+
+def format_itineraries(itineraries):
+    # Initialize an empty string to store the formatted output
+    formatted_output = ""
+    
+    # Iterate over each tuple in the list
+    for i, itinerary in enumerate(itineraries, start=1):
+        # Unpack the tuple
+        traveler_name, origin, destination = itinerary
+        
+        # Format the itinerary and append it to the output string
+        formatted_output += f"Itinerary {i}: {traveler_name} - From {origin} to {destination}\n"
+    
+    # Return the formatted output
+    return formatted_output
+
+# Test the function with sample input
+itineraries = [("Alice", "New York", "London"), ("Bob", "Tokyo", "San Francisco")]
+formatted_itineraries = format_itineraries(itineraries)
+print(formatted_itineraries)

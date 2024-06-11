@@ -1,0 +1,21 @@
+#task 1
+
+def process_orders(orders):
+    # Iterate over each order tuple
+    for order_number, (customer_name, product, quantity) in enumerate(orders, start=1):
+        # Print the order details
+        print(f"Order {order_number}:")
+        print(f"Customer Name: {customer_name}")
+        print(f"Product: {product}")
+        print(f"Quantity: {quantity}")
+        print()  # Add a blank line between orders
+
+# Sample order data
+orders = [
+    ("Alice", "Laptop", 1),
+    ("Bob", "Camera", 2),
+    # More orders...
+]
+
+# Process and print the orders
+process_orders(orders)
